@@ -1,0 +1,250 @@
+:root {}
+
+/* FONTS */
+
+/* montserrat-700 - latin */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""),
+    url("../fonts/montserrat-v21-latin-700.woff2") format("woff2"),
+    url("../fonts/montserrat-v21-latin-700.woff") format("woff");
+  font-display: swap;
+}
+
+
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  line-height: 28px;
+  background-color: #f7f7fe;
+}
+
+.main-content {
+  flex-grow: 1;
+
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  padding: 70px 25px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.pricing-box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 64px;
+}
+
+.pricing-heading {
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-size: 32px;
+  line-height: 39px;
+  text-align: center;
+  color: #6E728E;
+}
+
+.switch-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.control-options {
+  text-decoration: none;
+  font-size: 15px;
+  text-align: right;
+  color: #6e728e;
+  opacity: 0.5;
+
+}
+
+.control-options:not(:last-child) {
+  margin-right: 24px;
+}
+
+.switch-control-button {
+  position: relative;
+  width: 100%;
+  max-width: 56px;
+  height: 32px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
+  margin-right: 24px;
+}
+
+.switch-control-button:active {
+  opacity: 0.6;
+}
+
+.switch-control-button-input {
+  visibility: hidden;
+}
+
+.switch-control-button-label {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #fff;
+  top: 4px;
+  left: 4px;
+  cursor: pointer;
+  transition: left 0.2s ease;
+}
+
+.switch-control-button-input:checked+.switch-control-button-label {
+  left: 50%;
+}
+
+/* Pricing-plan */
+.button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 14px 66px;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 1.4px;
+  border-radius: 6px;
+}
+
+.inner-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pricing-plan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 350px;
+  height: 453px;
+  background: #fff;
+  box-shadow: 0px 20px 40px rgba(212, 210, 244, 0.5);
+  padding: 31px;
+}
+
+.pricing-plan:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.pricing-plan:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.pricing-plan-heading {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  color: #6e728e;
+}
+
+.pricing-plan-price {
+  display: flex;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+
+.pricing-plan-money {
+  margin-right: 8px;
+  font-size: 40px;
+  line-height: 49px;
+  text-align: center;
+  letter-spacing: -1.2px;
+  color: #4A4D60;
+}
+
+.pricing-plan-number {
+  font-size: 72px;
+  line-height: 71px;
+  letter-spacing: -2.16px;
+  color: #4A4D60;
+}
+
+.pricing-plan-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+
+}
+
+.pricing-plan-list-item {
+  font-size: 15px;
+  text-align: center;
+  color: #6E728E;
+  padding: 12px;
+  width: 100%;
+  max-width: 288px;
+  border-top: 1px solid rgb(110, 114, 142, 0.25);
+}
+
+.pricing-plan-link {
+  color: #fff;
+  background: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
+
+}
+
+.pricing-plan-link:hover {
+  color: #6d72de;
+  background: #fff;
+  border: 1px solid #6d72de;
+}
+
+.pricing-plan-link-button {
+  color: #6d72de;
+  background: #fff;
+}
+
+.pricing-plan-link-button:hover {
+  color: #fff;
+  background: #6d72de;
+  border: 1px solid #fff;
+}
+
+.pricing-plan-professional {
+  height: 500px;
+  position: relative;
+  z-index: 1;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #A2A7F0 0.05%, #696EDD 100.05%);
+  box-shadow: 0px 20px 40px rgba(212, 210, 244, 0.5);
+
+}
+
+.pricing-plan-professional .pricing-plan-heading {
+  color: #fff;
+}
